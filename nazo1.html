@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>謎①：応援団の秘密</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 80%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById("answer").value;
+      if (answer === "緑") {
+        window.location.href = "clear.html";
+      } else {
+        alert("ちがうで！もう一回考えてみて！");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>謎①：応援団の秘密</h1>
+  <p>団旗の色は何色でしょう？</p>
+  
+  <input type="text" id="answer" placeholder="ここに答えを入力">
+  <br>
+  <button onclick="checkAnswer()">送信</button>
+</body>
+</html>
